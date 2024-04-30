@@ -3,21 +3,49 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Travel and Hospitality</title>
 		<link rel="stylesheet" href="reset.css" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="media.css" />
 
 		<script src="./index.js" defer></script>
 		<script src="./nav-burger-menu.js"></script>
+		<script src="./header.js"></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter&family=Michroma&display=swap"
 			rel="stylesheet" />
 	</head>
+
 	<body>
 		<div class="warapper">
+			<div class="scroll-btn btn-hidden" id="scrollBtn">
+				<div class="progress-ring">
+					<svg class="progress-ring__circle" width="50" height="50">
+						<circle
+							class="progress-ring__background"
+							stroke="#f0f0f0"
+							stroke-width="2"
+							fill="transparent"
+							r="23"
+							cx="25"
+							cy="25"></circle>
+						<circle
+							class="progress-ring__progress"
+							stroke="#0146fe"
+							stroke-width="2"
+							fill="transparent"
+							r="23"
+							cx="25"
+							cy="25"></circle>
+					</svg>
+				</div>
+				<span id="innerPercentage"></span>
+			</div>
+
+
 			<header class="header">
 				<div class="header__inner container">
 					<a href="/" class="header__logo"></a>
@@ -31,21 +59,22 @@
 					</ul>
 
 					<div class="header__buttons">
-						<button class="header__btn-menu">
-							<a id="menu-toggle" class="menu-toggle">
-								<span class="menu-toggle-bar menu-toggle-bar--top"></span>
-								<span class="menu-toggle-bar menu-toggle-bar--middle"></span>
-								<span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
-							</a>
-						</button>
 						<button
 							id="burger-btn"
 							class="buttons-account btn-transparent header-button">
 							<img src="./assets/img/icons/user.svg" alt="a" />
 							Account
 						</button>
+
 						<button class="buttons-contact btn-blue header-button">
 							Contact us
+						</button>
+
+						<div id="menu-toggle" class="menu-toggle">
+						<button class="header__btn-menu menu-toggle">
+							<span class="menu-toggle-bar menu-toggle-bar--top"></span>
+							<span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+							<span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
 						</button>
 					</div>
 				</div>
@@ -68,6 +97,7 @@
 
 				<section class="section1">
 					<div class="section1__block container box">
+
 						<div class="block-desc">
 							<h1 class="block-title title">Our language solution</h1>
 							<h2 class="block-text under-title">
@@ -76,6 +106,7 @@
 								text ever since
 							</h2>
 						</div>
+
 						<div class="section1__block-boxes">
 							<div class="section1__box">
 								<h3 class="box-title">Translation</h3>
@@ -85,6 +116,7 @@
 								</span>
 								<img src="./assets/img/images/imgSection2/box1.png" alt="" />
 							</div>
+
 							<div class="section1__box">
 								<h3 class="box-title">Translation</h3>
 								<span class="box__title under-title">
@@ -93,6 +125,7 @@
 								</span>
 								<img src="./assets/img/images/imgSection2/box1.png" alt="" />
 							</div>
+
 							<div class="section1__box">
 								<h3 class="box-title">Translation</h3>
 								<span class="box__title under-title">
@@ -101,6 +134,7 @@
 								</span>
 								<img src="./assets/img/images/imgSection2/box1.png" alt="" />
 							</div>
+
 						</div>
 					</div>
 				</section>
@@ -109,6 +143,7 @@
 
 				<section class="section2">
 					<div class="section2__block container">
+
 						<div class="block-desc">
 							<h1 class="title">Who is this product for?</h1>
 							<h2 class="under-title">
@@ -134,78 +169,85 @@
 							</div>
 
 							<div class="slider__content">
-								<div class="slide slide-box">
+
+								<div class="slide">
 									<div class="slide-box__desc">
 										<h2 class="slide-title title">For travelers</h2>
-										<ul class="slide__text under-title">
+										<ul class="slide__list">
 											<li>Highlight one word in the text on the page.</li>
 											<li>
 												Word meaning, pronunciation, synonyms,
-												hypernyms,hyponyms . and more.
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
 											<li>Highlight one word in the text on the page.</li>
 											<li>
-												Word meaning, pronunciation, synonyms, hypernyms,
-												hyponyms . and more.
+												Word meaning, pronunciation, synonyms,
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
 										</ul>
 									</div>
 									<div class="slide__img-container">
 										<img
+											class="img-slide"
 											src="./assets/img/images/image1.png"
 											alt="Travel Image" />
 									</div>
 								</div>
 
-								<div class="slide slide-box">
+								<div class="slide">
 									<div class="slide-box__desc">
 										<h2 class="slide-title title">For travel organization</h2>
-										<ul class="slide__text">
-											<li class="slide__text-item">
-												Highlight one word in the text on the page.
+										<ul class="slide__list">
+											<li>Highlight one word in the text on the page.</li>
+											<li>
+												Word meaning, pronunciation, synonyms,
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
-											<li class="slide__text-item">
-												Word meaning, pronunciation, synonyms, hypernyms,
-												hyponyms . and more.
-											</li>
-											<li class="slide__text-item">
-												Highlight one word in the text on the page.
-											</li>
-											<li class="slide__text-item">
-												Word meaning, pronunciation, synonyms, hypernyms,
-												hyponyms . and more.
+											<li>Highlight one word in the text on the page.</li>
+											<li>
+												Word meaning, pronunciation, synonyms,
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
 										</ul>
 									</div>
 									<div class="slide__img-container">
 										<img
+											class="img-slide"
 											src="./assets/img/images/image2.png"
 											alt="Travel organization Image" />
 									</div>
 								</div>
 
-								<div class="slide slide-box">
+								<div class="slide">
 									<div class="slide-box__desc">
 										<h2 class="slide-title title">For employees</h2>
 										<ul class="slide__list">
 											<li>Highlight one word in the text on the page.</li>
 											<li>
-												Word meaning, pronunciation, synonyms, hypernyms,
-												hyponyms . and more.
+												Word meaning, pronunciation, synonyms,
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
 											<li>Highlight one word in the text on the page.</li>
 											<li>
-												Word meaning, pronunciation, synonyms, hypernyms,
-												hyponyms . and more.
+												Word meaning, pronunciation, synonyms,
+												<br />
+												&emsp;&ensp;hypernyms, hyponyms . and more.
 											</li>
 										</ul>
 									</div>
 									<div class="slide__img-container">
 										<img
+											class="img-slide"
 											src="./assets/img/images/image3.png"
 											alt="For employees Image" />
 									</div>
 								</div>
+
 							</div>
 						</div>
 						<button class="btn-trail">Request a free trial</button>
@@ -260,6 +302,22 @@
 									</span>
 								</div>
 							</div>
+
+							<div class="section3__grid-el box">
+								<div class="el-img">
+									<img src="./assets/img/icons/section3/Vector.png" alt="" />
+								</div>
+
+								<div class="el-desc">
+									<h3 class="box-title">Book trips & tickets easily</h3>
+									<span class="box-text">
+										We provide cloud, sdk and on-premise translation solutions.
+										All your private data stays with you
+									</span>
+								</div>
+
+							</div>
+
 							<div class="section3__grid-el box">
 								<div class="el-img">
 									<img src="./assets/img/icons/section3/Vector.png" alt="" />
@@ -273,6 +331,7 @@
 									</span>
 								</div>
 							</div>
+
 							<div class="section3__grid-el box">
 								<div class="el-img">
 									<img src="./assets/img/icons/section3/Vector.png" alt="" />
@@ -285,26 +344,72 @@
 										All your private data stays with you
 									</span>
 								</div>
-							</div>
-							<div class="section3__grid-el box">
-								<div class="el-img">
-									<img src="./assets/img/icons/section3/Vector.png" alt="" />
-								</div>
 
-								<div class="el-desc">
-									<h3 class="box-title">Book trips & tickets easily</h3>
-									<span class="box-text">
-										We provide cloud, sdk and on-premise translation solutions.
-										All your private data stays with you
-									</span>
-								</div>
 							</div>
 						</div>
 						<button class="btn-trail">Request a free trial</button>
 					</div>
 				</section>
 			</main>
-			<footer></footer>
+			<footer class="footer">
+				<div class="footer__wrapper container">
+					<div class="footer__col">
+						<div class="col__list">
+							<span class="col__title">Products</span>
+							<ul class="col__items">
+								<li class="item">Translation Server</li>
+								<li class="item">Cloud API</li>
+								<li class="item">Mobile SDK</li>
+								<li class="item">Data Studio</li>
+							</ul>
+						</div>
+						<div class="col__list-time">
+							<span class="col__title">WE ARE CLOSED • 6:16 PM (GMT+3)</span>
+							<ul class="col__items-time">
+								<li class="item-time">Business Hours:</li>
+								<li class="item-time">Monday — Friday</li>
+								<li class="item-time">9 AM — 5 PM</li>
+							</ul>
+						</div>
+						<div class="col__lenguage">
+							<span class="col__title">English</span>
+						</div>
+					</div>
+					<div class="footer__col">
+						<div class="col__list">
+							<span class="col__title">Products</span>
+							<ul class="col__items">
+								<li class="item">Translation Server</li>
+								<li class="item">Cloud API</li>
+								<li class="item">Mobile SDK</li>
+								<li class="item">Data Studio</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<div class="col__list">
+							<span class="col__title">Products</span>
+							<ul class="col__items">
+								<li class="item">Translation Server</li>
+								<li class="item">Cloud API</li>
+								<li class="item">Mobile SDK</li>
+								<li class="item">Data Studio</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<div class="col__list">
+							<span class="col__title">Products</span>
+							<ul class="col__items">
+								<li class="item">Translation Server</li>
+								<li class="item">Cloud API</li>
+								<li class="item">Mobile SDK</li>
+								<li class="item">Data Studio</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</body>
 </html>

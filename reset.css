@@ -108,12 +108,12 @@ section {
 }
 
 .warapper {
-	min-width: 100vw;
-	overflow-x: hidden;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 80px;
+	background-color: rgb(9, 9, 9);
 }
 .main {
 	display: flex;

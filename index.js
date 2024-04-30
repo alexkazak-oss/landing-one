@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         buttons[index].classList.add('btn-active');
     }
 
-    function setPrevSlide(index) {
+    function setPrevSlide() {
         const activeSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
         let nextSlideIndex = activeSlideIndex + 1 < slides.length ? activeSlideIndex + 1 : 0;
         const nextSlide = document.querySelector('.slider__content .slide.prev');
